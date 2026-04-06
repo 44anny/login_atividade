@@ -5,9 +5,9 @@ const firebaseConfig = {
     apikey:"suas credencias",
     autDomain:"seu dominio",
     projectId:"o nome projetodo firebase",
-);
+};
 
-//inicializar
+//inicializar  yhh
 
 firabase.initializeApp(firebaseeConfig)
 const auth = firebaseeConfig.auth();
