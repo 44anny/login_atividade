@@ -24,9 +24,20 @@ input{ padding: 10px;
 button{
     padding: 10px;
     border:none;
-    background: #cfcfb8;
+    background: #0dda40;
     color: white;
     cursor: pointer;
     border-radius: 5px;
+
+}
+
+.buttons{
+    padding: 10px;
+    border:none;
+    background: #cab70d;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+
 
 }
