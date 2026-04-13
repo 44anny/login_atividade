@@ -11,45 +11,41 @@ const firebaseConfig = {
      measurementId: "G-EGES8GYVE3"
 };
 
-//inicializar  yhh
+// Inicializar Firebase
+const app = firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
 
-firabase.initializeApp(firebaseeConfig)
-const auth = firebaseeConfig.auth();
- //função login
- function login()
- const email = document.getElementById("email").value;
- const senha= document.getElementById("senha").value;
- const msg= document.getElementById("mensagem").value;
+// Função de login
+function login() {
+const email = document.getElementById("email").value;
+const senha = document.getElementById("senha").value;
+const msg = document.getElementById("mensagem");
 
- const app = initializeApp(firebaseConfig);
- const analytics = getAnalytics(app);
-
- auth.signInwitEmailAndPassword(email,senha)
- .then(()=>{
-    msg. innerText="Login realizado com Sucesso!"
-    msg.style.color="green";
-
- })
- .catch(console.error=>{
-    msg.innerText=error.mensagem
-    msg.style.color="red"
- });
-
- // 4. Função de Cadastro
-function cadastrar() {
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
-    const msg = document.getElementById("mensagem");
-
-    auth.createUserWithEmailAndPassword(email, senha)
-        .then(() => {
-            msg.innerText = "Conta criada com sucesso!";
+auth.signInWithEmailAndPassword(email, senha)
+.then(() => {
+            msg.innerText = "Login realizado com sucesso!";
             msg.style.color = "green";
-        })
-        .catch((error) => {
-            msg.innerText = error.message;
-            msg.style.color = "red";
-        });
+})
+.catch((error) => {
+msg.innerText = error.message;
+msg.style.color = "red";
+});
 }
 
+// Função de cadastro
+function cadastrar() {
+const email = document.getElementById("email").value;
+const senha = document.getElementById("senha").value;
+const msg = document.getElementById("mensagem");
+
+auth.createUserWithEmailAndPassword(email, senha)
+.then(() => {
+    msg.innerText = "Conta criada com sucesso!";
+    msg.style.color = "green";
+})
+.catch((error) => {
+    msg.innerText = error.message;
+     msg.style.color = "red";
+});
+};
 

@@ -3,7 +3,7 @@ body{
     display: flex;
     justify-content: center;
     box-align:100vh;
-    background: linear-gradient(120deg,#4facfe, #00f2fe);
+    background: linear-gradient(120deg,#b284dd, #6e1597);
   
 }.container{
     background: white;
